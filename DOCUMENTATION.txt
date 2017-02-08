@@ -1,0 +1,44 @@
+DOCUMENTATION
+=============
+
+print ... -- can be used to print a variable, string or integer.
+
+input identifier -- used to receive user input and store in variable given.
+
+if condition then
+	...
+else
+	...
+end
+
+OR
+
+if condition then 
+	...
+end
+
+while condition do
+	...
+end
+
+for identifier = startVal to endVal do
+	...
+end
+
+func identifier do
+	...
+end
+
+call identifier -- Calls the function with the given name
+
+identifier = value -- Sets a variable to a specific value, can be a string or integer. All variables are global.
+
+A statement that will have another statement after it must finish in a ';' if the statement is a conditional/loop/funcition then the ';' is placed after the 'end' keyword
+
+All CAM files end with a .cam extension.
+
+
+
+
+
+
