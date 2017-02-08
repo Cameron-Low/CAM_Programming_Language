@@ -1,7 +1,7 @@
 import functools
-from lexer import *
+from CAMlexer import *
 from combinators import *
-from ast import *
+from CAMast import *
 
 # Basic parsers
 def keyword(kw):
@@ -132,7 +132,17 @@ def bexp_group():
 
 
 def sexp():
-    return string ^ (lambda str: StringExp(str))
+    return precedence(sexp_term(),
+                      aexp_precedence_levels,
+                      process_binop)
+
+
+def sexp_term():
+    return sexp_value()
+
+
+def sexp_value():
+    return string ^ (lambda strs: StringExp(strs))
 
 
 # Arithmetic expressions
@@ -186,6 +196,7 @@ def process_logic(op):
 
 
 def process_group(parsed):
+    print(parsed)
     ((_, p), _) = parsed
     return p
 
