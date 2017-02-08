@@ -157,7 +157,7 @@ class StringExp(Equality):
         self.str = str
 
     def __repr__(self):
-        return 'StringExpression(%s)' % self.str
+        return 'StringExp(%s)' % self.str
 
     def eval(self, env):
         return self.str.strip('"')

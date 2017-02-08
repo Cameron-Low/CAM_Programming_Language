@@ -1,10 +1,10 @@
-import CAMparser, lexer
+import CAMparser, CAMlexer
 
 
 def main(filePath):
     filename = filePath
     text = open(filename).read()
-    tokens = lexer.lex(text)
+    tokens = CAMlexer.lex(text)
     if not tokens:
         return
 
@@ -16,6 +16,7 @@ def main(filePath):
     ast = parse_result.value
     env = {"printing": []}
     ast.eval(env)
+    print(ast)
 
     if __name__ != "__main__":
         return env

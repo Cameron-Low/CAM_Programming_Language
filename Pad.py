@@ -1,5 +1,5 @@
 # Setting up imports
-import tkinter, re, cam
+import tkinter, re, CAM
 from tkinter import filedialog
 
 # Class declaration
@@ -138,8 +138,10 @@ class Pad:
     def Run(self, event=None):
         # Save file first
         self.Save()
+        print('\n'*50)
         # Call the CAM interpreter to compile the code and return the environment created
-        env = cam.main(self.filePath)
+        env = CAM.main(self.filePath)
+
 
     # Function that creates the find and replace window
     def ReplaceWindow(self, event=None):

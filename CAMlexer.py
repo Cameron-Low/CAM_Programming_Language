@@ -22,7 +22,7 @@ tokenExpressions = [
     (r'>', RESERVED),
     (r'!=', RESERVED),
     (r'=', RESERVED),
-    (r'".*"', STRING),
+    (r'"[A-Za-z][A-Za-z0-9_-]*"', STRING),
     (r'and', RESERVED),
     (r'or', RESERVED),
     (r'not', RESERVED),
@@ -39,7 +39,7 @@ tokenExpressions = [
     (r'print', RESERVED),
     (r'input', RESERVED),
     (r'[0-9]+', INT),
-    (r'[A-Za-z][A-Za-z0-9_-]*', ID)]
+    (r'[A-Za-z][A-Za-z0-9_]*', ID)]
 
 
 def lex(characters):
