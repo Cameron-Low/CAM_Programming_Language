@@ -36,9 +36,3 @@ identifier = value -- Sets a variable to a specific value, can be a string or in
 A statement that will have another statement after it must finish in a ';' if the statement is a conditional/loop/funcition then the ';' is placed after the 'end' keyword
 
 All CAM files end with a .cam extension.
-
-
-
-
-
-
